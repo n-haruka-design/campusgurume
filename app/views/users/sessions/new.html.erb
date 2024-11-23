@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ログイン</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-container">
+      <h2>ログイン</h2>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email, "メールアドレス" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password, "パスワード" %><br />
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me, "パスワードを保存する" %>
+          </div>
+        <% end %>
+
+        <div class="actions">
+          <%= f.submit "Log in", class: "login-button" %>
+        </div>
+      <% end %>
+      <div class="links">
+        <%= render "users/shared/links" %>
+      </div>
+    </div>
+  </div>
+</body>
+<%= link_to "TOPに戻る", tweets_path, class: 'button' %>
+</html>
+
+
+
+
+<!-- 
+<div class="sinki">
+
+<h2>ログイン</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :メールアドレス%><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :パスワード%><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :パスワードを保存する %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<%= link_to "TOPに戻る", tweets_path, class: 'button' %>
+
+<%= render "users/shared/links" %>
+
+</div>
+-->

@@ -1,0 +1,31 @@
+<h6>マイページ</h6>
+<div class="user-info">
+  <p>名前 : <%= @user.name %></p>
+  <p>メールアドレス : <%= @user.email %></p>
+  <p>プロフィール : <%= @user.profile %></p>
+
+  <% if current_user.id == @user.id %>
+    <%= link_to "編集する", edit_user_registration_path, class: 'button' %>
+  <% end %>
+</div>
+
+<h6>あなたの投稿</h6>
+<div class="user-tweets">
+  <% @user.tweets.each do |t| %>
+    <p><%= t.user.name %></p>
+    <p><%= t.shop %></p>
+    <p><%= t.menu %></p>
+  <% end %>
+</div>
+
+<!-- 以下はいいね機能を実装している場合-->
+<h6>いいねした投稿</h6>
+<div class="liked-tweets">
+  <% @user.liked_tweets.each do |t| %>
+    <p><%= t.user.name %></p>
+    <p><%= t.shop %></p>
+  <% end %>
+</div>
+<!-- ここまで-->
+
+<%= link_to "TOPに戻る", tweets_path, class: 'button' %>

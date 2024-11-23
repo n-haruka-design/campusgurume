@@ -1,0 +1,1005 @@
+// Place all the styles related to the Tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.lecture_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    margin: 30px;
+  }
+  .name_field{
+    width: 100%; /* 相対値に変更 */
+    max-width: 200px; /* 最大幅を設定 */
+    margin-bottom: 30px;
+   
+  }
+
+/*　以下新規投稿ページの星用のCSS　*/
+
+  .post_form{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  .post_form input[type='radio']{
+    display: none;
+  }
+  .post_form label{
+    position: relative;
+    padding: 10px 10px 0;
+    color: gray;
+    cursor: pointer;
+    font-size: 30px; /*星の大きさを変更するときはここ*/
+  }
+  .post_form label .text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 9px; /*星の上の説明書きの大きさを変更するときはここ*/
+    color: gray;
+  }
+  .post_form label:hover,
+  .post_form label:hover ~ label,
+  .post_form input[type='radio']:checked ~ label{
+    color: #ffcc00;
+  }
+
+
+/*　以下一覧ページの星用のCSS　*/
+
+  .star-rating {
+    position: relative;
+    display: inline-block;
+    width: 5em;
+    height: 1em;
+    font-size: 25px;
+  }
+  .star-rating-front {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #ffcc33;
+  }
+  .star-rating-back {
+    display: inline-block;
+    color: #808080;
+
+  }
+
+
+  .tweet{
+    margin: 50px;
+    background-color: #fffae6;
+    height: 400px;
+    width: 400px;
+    justify-content: center;
+  }
+
+  .tweets-container{
+    display: flex;
+  }
+
+  body{
+    background-color:#f7e93f; 
+    font-family: 'Arial', sans-serif;
+    
+  }
+
+  h1{
+    color: #006dee;
+  }
+
+  .tweet1{
+    background-color: #FFFFCC;
+  }
+
+  .mite{
+    width: 100vw;
+    height: auto;
+  }
+
+  /*　投稿部分　*/
+
+  .tweet {
+    width: 350px;
+    height: 500px;
+    margin: 20px auto; /* 中央揃えに変更 */
+    padding: 20px; /* パディングを追加 */
+    background-color: #fffae6;
+    border-radius: 10px; /* 角を丸く */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+
+  
+  .sinki{
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .tweets-container {
+    display: flex;
+    gap: 20px; /* 投稿間の隙間を設定 */
+    padding: 20px; 
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .post_form label {
+    position: relative;
+    padding: 10px 10px 0;
+    color: gray;
+    cursor: pointer;
+    font-size: 1.5em; /* フォントサイズを相対値に変更 */
+  }
+  
+/* スライドショー　*/
+  
+.slideshow {
+  position: relative;
+  height: 700px; /* 高さを600pxに調整 */
+  width: 1200px; /* 幅を900pxに調整 */
+  overflow: hidden; /* 枠の外にはみ出さないようにするため */
+  border-radius: 25% / 50%; /* 横長の楕円 */
+  margin: 70px auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加して立体感を出す */
+  background: linear-gradient(to right, #ffe4e1, #ffccd5); /* 可愛らしいグラデーション背景 */
+}
+
+.slideshow-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slideshow 9s infinite;
+  opacity: 0;
+  border-radius: 25% / 50%; /* 枠の形を横長の楕円にする */
+}
+
+.slideshow-image:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slideshow-image:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.slideshow-image:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes slideshow {
+  0%    {opacity: 0; }
+  11.1% {opacity: 1; }
+  33.3% {opacity: 1; }
+  44.4% {opacity: 0; }
+  100%  {opacity: 0; }
+}
+
+
+header{
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.post_form label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+/*　フォント変更　*/
+
+body {
+  font-family: 'Yomogi', sans-serif;
+  
+}
+.header-list {
+  display: flex;
+  justify-content: flex-end;
+}
+.header-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.header-list li {
+  margin-left: 1em;
+}
+
+
+.university-links a {
+  margin: 5px;
+  text-decoration: none;
+  font-family: 'Yomogi', sans-serif; /* リンクのフォントを変更 */
+}
+.details-container {
+  margin-top: 20px;
+}
+h1, h3 {
+  font-family: 'Yomogi', sans-serif; /* 見出しのフォントを変更 */
+}
+
+/*ここから紹介文*/
+/*
+.tweet1 {
+  border: 2px dashed #ffa07a;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tweet1 h3 {
+  color:#ffa07a;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.tweet1 p {
+  color: #333;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.icon-container {
+  margin-top: 20px;
+}
+
+.icon-container i {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #ffa07a;
+}
+
+
+@media (max-width: 600px) {
+  .tweet1 {
+    padding: 15px;
+  }
+
+  .tweet1 h3 {
+    font-size: 20px;
+  }
+
+  .tweet1 p {
+    font-size: 16px;
+  }
+
+  .icon-container i {
+    font-size: 25px;
+  }
+}
+
+ .comment-wrapper{
+   font-size: small;
+ }
+
+*/
+ 
+
+ 
+ /*大学一覧*/
+ body {
+  margin: 0;
+  /* 背景色は変えずに */
+}
+
+.new-post-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd; /* 下線を追加して区切りを明確に */
+  position: relative;
+  border-radius: 15px; /* 角を丸く */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
+  margin: 20px 0; /* 上下に余白を追加 */
+  background-color: transparent; /* 背景色を透明に */
+}
+
+.new-post-container::before, .new-post-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  left: 0;
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/lace-pattern.png') repeat-x; /* レースのパターン画像 */
+  background-size: contain;
+}
+
+.new-post-container::before {
+  top: 0;
+  transform: rotate(180deg);
+}
+
+.new-post-container::after {
+  bottom: 0;
+}
+
+.university-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* リンク間の間隔を広げる */
+  padding: 20px;
+  justify-content: center;
+  background-color: #f6e857; /* 必要に応じて背景色を調整 */
+}
+
+.university-link {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px; /* 角を丸く */
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #006dee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
+  flex: 1 1 calc(22% - 30px); /* リンクの幅を広げる */
+  max-width: calc(22% - 30px);
+  font-size: 1em; /* フォントサイズ調整 */
+  font-weight: bold; /* 文字を太くする */
+
+}
+
+.university-link:hover {
+  transform: scale(1.05);
+  background-color: #ffe600;
+}
+
+.new-post-link {
+  display: block;
+  background-color: #006dee; 
+  border: 2px solid #ffe4e1;
+  border-radius: 20px;
+  padding: 15px 30px; /* パディングを調整 */
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  max-width: fit-content; /* サイズに合わせる */
+  font-size: 1.2em; /* フォントサイズを大きく */
+  position: relative;
+}
+
+.new-post-link:hover {
+  transform: scale(1.1);
+  background-color: #006dee;
+}
+
+
+/* 可愛らしいアニメーションを追加 */
+.new-post-link::before, .new-post-link::after {
+  content: '';
+  position: absolute;
+  border: 2px solid #f0f8ff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0288d1;
+  animation: bounce 1s infinite;
+}
+
+.new-post-link::before {
+  top: -5px;
+  left: -5px;
+  animation-delay: 0.3s;
+}
+
+.new-post-link::after {
+  bottom: -5px;
+  right: -5px;
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 投稿ページ */
+
+
+body {
+  font-family: 'Yomogi', sans-serif;
+  padding: 20px;
+}
+
+.sinki-toukou {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sinki-toukou h3 {
+  text-align: center;
+  color:  #006dee;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.field input[type="text"],
+.field select,
+.field textarea,
+.field input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Yomogi', sans-serif;
+}
+
+.post_form {
+  display: flex;
+  justify-content: center; /* 星を中央に揃える */
+  font-family: 'Yomogi', sans-serif;
+  max-width: 200px;
+  margin: 10px auto;
+}
+
+.post_form input[type="radio"] {
+  display: none;
+}
+
+.post_form label {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.post_form input[type="radio"]:checked ~ label {
+  color: #f39c12;
+}
+
+.rating-title {
+  font-size: 18px; /* 文字サイズを調整 */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #006dee;
+}
+
+
+.button {
+  display: inline-block;
+  background-color: #FFD700; /* 黄色に合うゴールド */
+  color: #006dee;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; /* 丸みを追加 */
+  font-family: 'Yomogi', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
+}
+.button:hover {
+  background-color: #FFB6C1; /* ホバー時の背景色を淡いピンクに変更 */
+  transform: translateY(-2px); /* ホバー時に少し上に移動 */
+}
+
+.button:active {
+  background-color: #FFB6C1;
+  transform: translateY(0); /* クリック時に元の位置に戻る */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* 投稿詳細ページ */
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #FFEC60;
+}
+
+.tweet-container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  border: 2px solid #ffcccb;
+}
+
+.tweet-header {
+  text-align: center;
+}
+
+.tweet-header .user-email {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.tweet-header .tweet-about {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.tweet-header .tweet-time {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.tweet-image img {
+  max-width: 100%;
+  border-radius: 15px;
+
+}
+
+.tweet-likes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.tweet-likes i {
+  color: #e0245e;
+  margin-right: 5px;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  color: #e0245e;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.comments-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+.comments-section h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+.comment {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-user {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+.comment-content {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.liked-users {
+  margin-top: 20px;
+}
+
+.liked-users h3 {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+.liked-users .liked-user-email {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form .comment-input {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-form .comment-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color:  #006dee;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.comment-form .comment-button:hover {
+  background-color:#006dee;
+}
+
+.navigation-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+.button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color:  #006dee;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.button:hover {
+  background-color:  #006dee;
+}
+
+/* ログインページ　*/
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.sinki, .login-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px; /* 角を丸く */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  border: 2px solid  #006dee; /* 青色のボーダー */
+}
+
+h2 {
+  text-align: center;
+  color:  #006dee; /* 青色の文字色 */
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  font-weight: bold;
+  display: inline-block; /* インラインブロックに変更 */
+  margin-bottom: 5px;
+  color:  #006dee; /* 青色の文字色 */
+  text-align: left; /* 左揃え */
+}
+
+.field em {
+  color:  #006dee; /* ラベルと同じ青色 */
+  font-style: normal; /* 斜体を解除 */
+  margin-left: 5px; /* 少しスペースを追加 */
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* 角を丸く */
+  box-sizing: border-box;
+  background-color: #f0f8ff; /* 淡い青色の背景 */
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions input {
+  background-color:  #006dee; /* 青色のボタン */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* 角を丸く */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.actions input:hover {
+  background-color: #0288d1; /* ホバー時の濃い青色 */
+}
+
+
+
+/* 新規登録ページ　*/
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.sinki {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px; /* 角を丸く */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  border: 2px solid  #006dee; /* 青色のボーダー */
+}
+
+h2 {
+  text-align: center;
+  color:  #006dee; /* 青色の文字色 */
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field em {
+  color:  #006dee; /* ラベルと同じ青色 */
+  font-style: normal; /* 斜体を解除 */
+  margin-left: 5px; /* 少しスペースを追加 */
+}
+
+.field label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color:  #006dee; /* 青色の文字色 */
+  text-align: left; /* 左揃え */
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* 角を丸く */
+  box-sizing: border-box;
+  background-color: #f0f8ff; /* 淡い青色の背景 */
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions input {
+  background-color:  #006dee; /* 青色のボタン */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* 角を丸く */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.actions input:hover {
+  background-color: #0288d1; /* ホバー時の濃い青色 */
+}
+
+/* ハートの色 */
+
+.liked-heart {
+  color: #e0245e;
+}
+
+.unliked-heart {
+  color: #e0245e;
+}
+
+
+
+/*　紹介部分 */
+
+.cute-intro {
+  background-color:#f0f8ff; /* 淡い青色の背景 */
+  border: 3px dashed #006dee; /* 青の点線ボーダー */
+  border-radius: 30px; /* 角を丸く */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽いシャドウ */
+  text-align: center; /* テキストを中央揃え */
+  position: relative; /* デコレーションのための相対位置 */
+  margin: 20px;
+  font-weight: bold; /* 文字を太くする */
+  color: #006dee; /* テキスト色を青に */
+  font-size: 1.2em; /* フォントサイズ */
+  line-height: 1.5; /* 行間 */
+  overflow: hidden; /* アニメーションの範囲を制限 */
+}
+
+.cute-intro p {
+  position: relative;
+  display: inline-block;
+  background: #f0f8ff; 
+  padding: 15px 30px;
+  border-radius: 20px; /* 角を丸く */
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 軽いシャドウ */
+  animation: sparkle 2s infinite linear; /* キラキラアニメーション */
+}
+
+.cute-intro p span {
+  font-size: 2em; /* 絵文字のサイズを大きく */
+  margin: 0 10px; /* 絵文字の間隔 */
+}
+
+@keyframes sparkle {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* タイトル */
+
+h1 {
+  font-size: 3em;
+  color: #006dee;
+  text-shadow: 3px 3px 5px #f0f8ff;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+
+
+.button {
+  display: inline-block;
+  padding: 8px 16px; /* パディングを小さくする */
+  font-size: 14px; /* フォントサイズを調整 */
+  color: #ffffff; /* テキストの色を白に設定 */
+  background-color: #007bff; /* 背景色を設定 */
+  border: none; /* ボーダーを無しに設定 */
+  border-radius: 5px; /* 角を丸くする */
+  text-decoration: none; /* テキストの下線を消す */
+  cursor: pointer; /* マウスオーバー時にポインターを表示 */
+  transition: background-color 0.3s ease; /* 背景色の変化にトランジションを追加 */
+}
+
+.button:hover {
+  background-color: #0056b3; /* ホバー時の背景色を変更 */
+}
+
+/*maipagi*/
+
+body {
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+h6 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #006dee;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px 0;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.user-info, .user-tweets, .liked-tweets {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.user-tweets p, .liked-tweets p {
+  margin: 5px 0;
+}
+
+
+h7 {color: #e0245e;
+     font-weight: bold; /* 文字を太くする */
+
+
+}
+
+
+.tweet p {
+  margin: 10px 0;
+  color: #e0245e;
+  font-weight: bold; /* 文字を太くする */
+} 
+

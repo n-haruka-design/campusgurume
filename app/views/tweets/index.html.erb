@@ -1,0 +1,169 @@
+<body>
+<header>
+<!-- 
+<div class="university-links">
+<div class="sinkitokou"><%= link_to "新規投稿へ", new_tweet_path %><br>
+</div>
+<%= link_to "東京大学へ",  toudai_tweets_path %>
+<%= link_to "東京工業大学へ",  toukoudai_tweets_path %>
+<%= link_to "一橋大学へ",  hitotubashi_tweets_path %>
+<%= link_to "横浜国立大学へ",  yokokoku_tweets_path %>
+<%= link_to "早稲田大学へ",  waseda_tweets_path %>
+<%= link_to "慶応義塾大学へ",  keio_tweets_path %>
+<%= link_to "青山学院大学へ",  aogaku_tweets_path %><br>
+<%= link_to "明治大学へ",  meiji_tweets_path %>
+<%= link_to "上智大学へ",  sophia_tweets_path %>
+<%= link_to "東京理科大学へ",  rikadai_tweets_path %>
+<%= link_to "立教大学へ",  rikkyo_tweets_path %>
+<%= link_to "法政大学へ",  housei_tweets_path %>
+<%= link_to "学習院大学へ",  gakushuin_tweets_path %>
+<%= link_to "日本大学へ",  nitidai_tweets_path %><br>
+<%= link_to "東洋大学へ",  toyo_tweets_path %>
+<%= link_to "駒澤大学へ",  komazawa_tweets_path %>
+<%= link_to "専修大学へ",  senshu_tweets_path %>
+<%= link_to "成蹊大学へ",  seikei_tweets_path %>
+<%= link_to "成城大学へ",  seijo_tweets_path %>
+<%= link_to "明治学院大学へ",  meigaku_tweets_path %>
+<%= link_to "獨協大学へ",  dokkyou_tweets_path %><br>
+<%= link_to "國學院大学へ",  kokugakuin_tweets_path %>
+<%= link_to "武蔵大学へ",  musashi_tweets_path %>
+<%= link_to "東海大学へ",  tokai_tweets_path %>
+<%= link_to "大東文化大学へ",  daitobunka_tweets_path %>
+<%= link_to "亜細亜大学へ",  asia_tweets_path %>
+<%= link_to "帝京大学へ",  teikyo_tweets_path %>
+<%= link_to "国士館大学へ",  kokushikan_tweets_path %>
+</div>
+
+</header>
+ -->
+
+
+
+ 
+<div class="slideshow">
+    <div class="slideshow-image" style="background-image: url('<%= asset_path 'ramen.jpg' %>');"></div>
+    <div class="slideshow-image" style="background-image: url('<%= asset_path 'hamburger.jpg' %>');"></div>
+    <div class="slideshow-image" style="background-image: url('<%= asset_path 'pancake.jpg' %>');"></div>
+</div>
+
+
+
+<div class="tweet1 cute-intro">
+  <p><span>🍔</span>大学周辺のグルメ情報を共有するサイトです！みなさんの投稿をお待ちしています！<span>🍜</span></p>
+</div>
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンプルページ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="new-post-container">
+            <%= link_to "投稿する", new_tweet_path, class: 'new-post-link' %>
+        </div>
+        <div class="university-links">
+            <%= link_to "東京大学へ",  toudai_tweets_path, class: 'university-link' %>
+            <%= link_to "東京工業大学へ",  toukoudai_tweets_path, class: 'university-link' %>
+            <%= link_to "一橋大学へ",  hitotubashi_tweets_path, class: 'university-link' %>
+            <%= link_to "横浜国立大学へ",  yokokoku_tweets_path, class: 'university-link' %>
+            <%= link_to "早稲田大学へ",  waseda_tweets_path, class: 'university-link' %>
+            <%= link_to "慶応義塾大学へ",  keio_tweets_path, class: 'university-link' %>
+            <%= link_to "青山学院大学へ",  aogaku_tweets_path, class: 'university-link' %>
+            <%= link_to "明治大学へ",  meiji_tweets_path, class: 'university-link' %>
+            <%= link_to "上智大学へ",  sophia_tweets_path, class: 'university-link' %>
+            <%= link_to "東京理科大学へ",  rikadai_tweets_path, class: 'university-link' %>
+            <%= link_to "立教大学へ",  rikkyo_tweets_path, class: 'university-link' %>
+            <%= link_to "法政大学へ",  housei_tweets_path, class: 'university-link' %>
+            <%= link_to "学習院大学へ",  gakushuin_tweets_path, class: 'university-link' %>
+            <%= link_to "日本大学へ",  nitidai_tweets_path, class: 'university-link' %>
+            <%= link_to "東洋大学へ",  toyo_tweets_path, class: 'university-link' %>
+            <%= link_to "駒澤大学へ",  komazawa_tweets_path, class: 'university-link' %>
+            <%= link_to "専修大学へ",  senshu_tweets_path, class: 'university-link' %>
+            <%= link_to "成蹊大学へ",  seikei_tweets_path, class: 'university-link' %>
+            <%= link_to "成城大学へ",  seijo_tweets_path, class: 'university-link' %>
+            <%= link_to "明治学院大学へ",  meigaku_tweets_path, class: 'university-link' %>
+            <%= link_to "獨協大学へ",  dokkyou_tweets_path, class: 'university-link' %>
+            <%= link_to "國學院大学へ",  kokugakuin_tweets_path, class: 'university-link' %>
+            <%= link_to "武蔵大学へ",  musashi_tweets_path, class: 'university-link' %>
+            <%= link_to "東海大学へ",  tokai_tweets_path, class: 'university-link' %>
+            <%= link_to "大東文化大学へ",  daitobunka_tweets_path, class: 'university-link' %>
+            <%= link_to "亜細亜大学へ",  asia_tweets_path, class: 'university-link' %>
+            <%= link_to "帝京大学へ",  teikyo_tweets_path, class: 'university-link' %>
+            <%= link_to "国士館大学へ",  kokushikan_tweets_path, class: 'university-link' %>
+        </div>
+    </header>
+</body>
+</html>
+
+
+
+
+<div class="tweets-container">
+ <% @tweets.each do |t| %>
+   <div class="tweet">
+   <%= image_tag t.image_url, size: "250x200" if t.image? %>
+   
+
+
+    <div>
+    <h2>総合評価
+    <span class="star-rating">
+       <span class="star-rating-front" style="width: <%= getPercent(t.star) %>%;">★★★★★</span>
+       <span class="star-rating-back">★★★★★</span>
+    </span> 
+    </h2>
+    </div>
+    
+    
+    <% if user_signed_in? %>
+    <% if current_user.already_liked?(t) %>
+        <%= link_to tweet_like_path(id: t.id, tweet_id: t.id), method: :delete do %>
+          <i class="fas fa-heart liked-heart"></i><%= t.likes.count %>
+        <% end %>
+    <% else %>
+        <%= link_to tweet_likes_path(id: t.id, tweet_id: t.id), method: :post do %>
+          <i class="far fa-heart unliked-heart"></i><%= t.likes.count %>
+        <% end %>
+    <% end %>
+<% else %>
+    <i class="far fa-heart unliked-heart"></i><%= t.likes.count %>
+<% end %>
+
+    <h7>店名：<h7>
+    <%= t.shop %><br>
+    <h7>ジャンル：<h7>
+    <%= t.genre %><br>
+    <h7>大学名：<h7><%= t.access %><br>
+    <h7>レビュー：<h7><%= t.about %><br>
+    <h7>おすすめメニュー：<h7><%= t.menu %>
+
+   
+
+
+      <%= t.created_at %>
+      <%= link_to "詳細へ", tweet_path(t.id), class: 'button' %>
+
+      <% if user_signed_in? && current_user.id == t.user_id %>
+      <%= link_to "編集する", edit_tweet_path(t.id),class: 'button' %>
+      <%= button_to "削除する", tweet_path(t.id), method: :delete,class: 'button' %>
+  
+      <% end %> 
+
+    </div>
+  <% end %>
+</div>
+
+
+
+<% if user_signed_in? %>
+  <%= link_to "マイページへ", user_path(current_user.id),class: 'button'  %>
+<% end %>
+
+</body>
